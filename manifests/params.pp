@@ -1,4 +1,4 @@
-class ssh:params {
+class ssh::params {
 
 	case $::osfamily {
 	  'Debian' : {
