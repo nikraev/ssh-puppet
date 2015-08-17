@@ -36,7 +36,7 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class ssh (
-	$port = [22]
+	$port = [22],
 	$syslog_facility = "AUTH",
 	$log_level = "INFO",
 	$permit_root_login = "no",
