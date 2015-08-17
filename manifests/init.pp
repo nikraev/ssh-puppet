@@ -43,6 +43,8 @@ class ssh (
 )
 {
 
+  include ssh::params
+  
 	package { "openssh-server":
 		ensure => "installed",
 	}
@@ -53,7 +55,7 @@ class ssh (
 		require => Package["openssh-server"],			
 	}
 
-	service { "ssh":
+	service { $ssh::params::ssh_svc :
 		ensure => "running",
 		enable => "true",
 		subscribe => File['/etc/ssh/sshd_config'],
